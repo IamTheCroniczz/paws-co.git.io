@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <base href="https://urbanstreetfinds.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Street Finds - Sua Loja de Streetwear</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b6b;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="fade-in">Urban Street Finds</h1>
+        <p>Sua Loja de Streetwear</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://urbanstreetfinds.com/">Home</a></li>
+            <li><a href="https://urbanstreetfinds.com/colecoes">Coleções</a></li>
+            <li><a href="https://urbanstreetfinds.com/sobre">Sobre</a></li>
+            <li><a href="https://urbanstreetfinds.com/contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Destaques da Semana</h2>
+        <div class="product-grid">
+            <div class="product-card fade-in">
+                <img src="https://example.com/camiseta-oversize.jpg" alt="Camiseta oversized preta com estampa urbana"
+                    class="product-image" width="250" height="250">
+                <div class="product-info">
+                    <h3 class="product-title">Camiseta Oversized Urban Vibe</h3>
+                    <p class="product-price">R$ 89,90</p>
+                </div>
+            </div>
+            <div class="product-card fade-in">
+                <img src="https://example.com/calca-cargo.jpg" alt="Calça cargo verde militar estilo streetwear"
+                    class="product-image" width="250" height="250">
+                <div class="product-info">
+                    <h3 class="product-title">Calça Cargo Street Style</h3>
+                    <p class="product-price">R$ 159,90</p>
+                </div>
+            </div>
+            <div class="product-card fade-in">
+                <img src="https://example.com/jaqueta-bomber.jpg" alt="Jaqueta bomber preta com detalhes em vermelho"
+                    class="product-image" width="250" height="250">
+                <div class="product-info">
+                    <h3 class="product-title">Jaqueta Bomber Night Rider</h3>
+                    <p class="product-price">R$ 229,90</p>
+                </div>
+            </div>
+            <div class="product-card fade-in">
+                <img src="https://example.com/tenis-chunky.jpg" alt="Tênis chunky branco com detalhes coloridos"
+                    class="product-image" width="250" height="250">
+                <div class="product-info">
+                    <h3 class="product-title">Tênis Chunky Urban Walker</h3>
+                    <p class="product-price">R$ 299,90</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Urban Street Finds. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+
+</html>
